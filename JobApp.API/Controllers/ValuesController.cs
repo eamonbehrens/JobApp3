@@ -19,7 +19,7 @@ namespace JobApp.API.Controllers
         {
             _context = context;
         }
-        // GET api/values
+        [AllowAnonymous]
         [HttpGet]
         public async Task<IActionResult> GetValues()
         {
@@ -27,7 +27,7 @@ namespace JobApp.API.Controllers
             return Ok(values);
         }
 
-       [AllowAnonymous]
+        [AllowAnonymous]
         [HttpGet("{id}")]
         public async Task<IActionResult> GetValue(int id)
         {

@@ -8,7 +8,6 @@ namespace JobApp.API.DTO
         public string Username {get; set;}
 
         [Required]
-        [EmailAddress]
         [StringLength(8, MinimumLength = 4, ErrorMessage= "Must be between 4-8 characters")]
         public string Password {get; set;}
         

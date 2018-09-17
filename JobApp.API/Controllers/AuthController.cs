@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using JobApp.API.Data;
 using JobApp.API.DTO;
 using JobApp.API.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
@@ -24,9 +25,8 @@ namespace JobApp.API.Controllers{
             _repo = repo;
             
         }
-        
-        [HttpPost(template: "register")]
-
+       
+        [HttpPost("register")]
         public async Task<IActionResult> Register(UserForRegisterDto userForRegisterDto) 
         {
             //validate request
