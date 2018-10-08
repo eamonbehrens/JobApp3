@@ -43,7 +43,7 @@ namespace JobApp.API.Data
         public async Task<User> RegisterAsync(User user, string password)
         {
            byte[] passwordHash, passwordSalt;
-           CreatPasswordHash(password, out passwordHash, out passwordSalt);
+           CreatePasswordHash(password, out passwordHash, out passwordSalt);
 
            user.PasswordHash = passwordHash;
            user.PasswordSalt = passwordSalt;
@@ -53,7 +53,7 @@ namespace JobApp.API.Data
             return user;
         }
 
-        private void CreatPasswordHash(string password, out byte[] passwordHash, out byte[] passwordSalt)
+        private void CreatePasswordHash(string password, out byte[] passwordHash, out byte[] passwordSalt)
         {
             using (var hmac = new System.Security.Cryptography.HMACSHA512())
             {
