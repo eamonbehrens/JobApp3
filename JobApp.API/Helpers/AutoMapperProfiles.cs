@@ -32,6 +32,7 @@ namespace JobApp.API.Helpers
                     opt.ResolveUsing(d => d.DateOfBrith.CalculateAge());
                 });
             CreateMap<Photo, PhotosForDetailedDto>();
+            CreateMap<UserForUpdateDto, User>();
         }
     }
 }
