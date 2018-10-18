@@ -1,8 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace JobApp.API.Models
+namespace JobApp.API.DTO
 {
-    public class Photo
+    public class PhotoForReturnDto
     {
         public int Id { get; set; }
         public string Url { get; set; }
@@ -11,9 +14,6 @@ namespace JobApp.API.Models
         public DateTime DateAddded { get; set; }
         public bool IsMain { get; set; }
 
-        public string PublicID { get; set; }
-        public User User { get; set; }
-        public int UserId { get; set; }
-
+        public string PublicId { get; set; }
     }
 }
